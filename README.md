@@ -29,7 +29,8 @@ Here are the steps to getting IoT Edge installed:
 (the moby packages that I downloaded and installed are what’s required for Azure IoT Edge 1.1.x so if you try to install other versions, the package requirements may vary)
   
   * Download Moby packages
-```sudo wget http://packages.microsoft.com/centos/7/prod/moby-cli-20.10.6%2Bazure-1.x86_64.rpm
+```
+sudo wget http://packages.microsoft.com/centos/7/prod/moby-cli-20.10.6%2Bazure-1.x86_64.rpm
 sudo wget http://packages.microsoft.com/centos/7/prod/moby-engine-20.10.6%2Bazure-1.el7.x86_64.rpm 
 sudo wget http://packages.microsoft.com/centos/7/prod/moby-containerd-1.4.4%2Bazure-1.el7.x86_64.rpm
 sudo wget http://packages.microsoft.com/centos/7/prod/moby-runc-1.0.0~rc93%2Bazure-1.x86_64.rpm
@@ -37,13 +38,15 @@ sudo wget http://packages.microsoft.com/centos/7/prod/moby-buildx-0.5.1%2Bazure-
 ```
 
   *	Download libiothsm and IoT Edge 
-```sudo wget https://github.com/Azure/azure-iotedge/releases/download/1.1.1/libiothsm-std_1.1.1-1.el7.x86_64.rpm
+```
+sudo wget https://github.com/Azure/azure-iotedge/releases/download/1.1.1/libiothsm-std_1.1.1-1.el7.x86_64.rpm
 sudo wget https://github.com/Azure/azure-iotedge/releases/download/1.1.1/iotedge-1.1.1-1.el7.x86_64.rpm
 ```
 
 3)	Install moby packages and IoT Edge
 
-```sudo yum install moby-buildx-0.5.1+azure-1.x86_64.rpm 
+```
+sudo yum install moby-buildx-0.5.1+azure-1.x86_64.rpm 
 sudo yum install moby-runc-1.0.0~rc93+azure-1.x86_64.rpm
 sudo yum install moby-containerd-1.4.4+azure-1.el7.x86_64.rpm 
 sudo yum install moby-engine-20.10.6+azure-1.el7.x86_64.rpm
