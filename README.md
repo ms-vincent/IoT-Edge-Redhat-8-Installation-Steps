@@ -2,15 +2,15 @@
 
 These are unofficial instructions that outline the steps to get Azure IoT Edge 1.1 LTS installed and running on Redhat 8.x. 
 
-In particular, the configuration that I was able to get installed:
+In particular, the configuration that I was able to get installed and have done basic tests on:
 
-- Azure IoT Edge: 1.1.2 
+- Azure IoT Edge: 1.1.2
 - Red Hat Enterprise Linux 8.2 (deployed as a VM in Azure from the Azure Marketplace: <BR>
 Create a resource and select the following tile: <BR>
 	![RedhatLVMTile](https://user-images.githubusercontent.com/16802088/115578149-07d19500-a293-11eb-90e2-3c9693cba6cb.jpg) <BR>
 Under "Image", select _Red Hat Enterprise Liux 8.2 (LVM) - Gen1_: BR>
 	![Redhat82Image](https://user-images.githubusercontent.com/16802088/115578190-10c26680-a293-11eb-91aa-32178123fd02.jpg)<BR><BR>
-  If you are using an existing Linux image, you'll have to remove any conflict container packages such as docker, podman, etc. 
+  If you are using an existing Linux image, you'll have to remove any conflicting container packages such as docker, podman, etc. There also might be some other dependencies that you'll need to get installed such as openssl which I have not documented below. 
 <BR><BR>
   
 **NOTE**: Redhat is not a tier 1 supported operating system but IoT Edge has been tested to run on Redhat 7.5. Redhat 7.5 specifically is listed as a tier 2 OS as per the platform support documentation and further tests of version 8.x has not been specifically done. Based on my testing, IoT Edge on RHEL 8 seems to work but I have not done extensive testing and your results may vary. <BR><BR>
