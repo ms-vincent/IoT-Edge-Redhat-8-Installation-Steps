@@ -26,10 +26,10 @@ sudo yum install moby-engine-20.10.6+azure-1.el7.x86_64.rpm
 sudo yum install moby-cli-20.10.6+azure-1.x86_64.rpm 
 ```
   
-4.	Install openssl (dependency for aziot identity service) <BR>
+4.	Install openssl <BR>
 ```sudo yum install -y compat-openssl10 ```
   
-5.	Download Azure Iot Edge 1.2 RPMs 
+5.	Download Azure IoT Edge 1.2 RPMs 
 ```
 wget https://github.com/Azure/azure-iotedge/releases/download/1.2.0/aziot-edge-1.2.0-1.el7.x86_64.rpm 
 wget https://github.com/Azure/azure-iotedge/releases/download/1.2.0/aziot-identity-service-1.2.0-1.x86_64.rpm 
