@@ -1,4 +1,4 @@
-#Instructions for Installing Azure IoT Edge 1.1 on Redhat Enterprise Linux
+# Instructions for Installing Azure IoT Edge 1.1 on Redhat Enterprise Linux
 
 1)	One of the key pre-requisites to run moby is container-selinux. <BR>
    Update your RHEL install to the latest version. 
