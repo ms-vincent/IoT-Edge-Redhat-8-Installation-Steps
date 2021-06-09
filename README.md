@@ -1,4 +1,4 @@
-# Instructions for Install Azure IoT Edge on Redhat 8
+# Instructions for Installation of Azure IoT Edge on Redhat 8.x
 
 These are unofficial instructions that outline the steps to get Azure IoT Edge installed and running on Redhat 8.x. 
 
