@@ -51,5 +51,10 @@ https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge?view=iot
 
 8)	Use the check tool to verify configuration and connection status of the device.<BR>
 ```sudo iotedge check```
-
-9)	Deploy modules and off you go! 
+	
+9) 	The IoT Edge Agent isn't set to start automatically on boot so you'll need to run the following: <BR>
+```sudo systemctl enable iotedge.service```
+	
+	The agent should auto-start the next time that you reboot/start up your edge device. 
+	
+10)	Deploy modules and off you go! 
