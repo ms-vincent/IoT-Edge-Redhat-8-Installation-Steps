@@ -48,7 +48,8 @@ sudo yum install aziot-edge-1.2.0-1.el7.x86_64.rpm
   https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge?view=iotedge-2020-11#provision-the-device-with-its-cloud-identity 
   
 9. The Azure IoT Edge service isn't set to start automatically on boot so you'll need to run the following systemctl commands:
-```sudo systemctl enable aziot-edged.service
+```
+sudo systemctl enable aziot-edged.service
 sudo systemctl enable aziot-keyd.service
 sudo systemctl enable aziot-certd.service
 sudo systemctl enable aziot-identityd.service
