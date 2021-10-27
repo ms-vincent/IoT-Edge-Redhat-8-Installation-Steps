@@ -20,6 +20,8 @@ For a list of supported operating systems, see https://docs.microsoft.com/en-us/
 <BR><BR>
 
 ## Installation of IoT Edge on Redhat Linux 
+
+**Oct Update**: The following documentation has been updated to include instructions on how to install Edge using the new Microsoft provided moby packages for Redhat 8. 
 	
 Follow the instructions for the version of Azure IoT Edge that you are looking to install: 
 1) [Azure IoT Edge 1.1 LTS](https://github.com/ms-vincent/IoT-Edge-Redhat-8-Installation-Steps/blob/main/Edge11/README.md)
