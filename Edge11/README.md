@@ -1,42 +1,24 @@
 # Instructions for Installing Azure IoT Edge 1.1 on Redhat Enterprise Linux 8.x
 
-1)	One of the key pre-requisites to run moby is container-selinux. <BR>
-   Update your RHEL install to the latest version. 
-   * Check to see if container-selinux is installed:<BR>
-	```rpm -q container-selinux```
-   *	Install container-selinux:<BR>
-```sudo yum install container-selinux```<BR>
-(the version I had installed at the time of writing was 2:2.124.0.1)
-2)	Download all the packages required for the installing of IoT Edge. <BR>
-(the moby packages that I downloaded and installed are what’s required for Azure IoT Edge 1.1.x so if you try to install other versions, the package requirements may vary)
+The following instructions have been updated to include the latest Microsoft provided Moby packages for Redhat 8. Old instructions to install IoT Edge with the 
+Moby packages for CentOS 7 is at the following [link](./CentOS7.md). 
+
+1) Microsoft has created a new convenience package to set up the Microsoft repository for a device. To download that package: <BR>
+```wget https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm  ```
+
+2) Install packages including moby for Redhat 8: <BR>
+```
+sudo yum install ./packages-microsoft-prod.rpm
+sudo yum install moby-engine 
+sudo yum install moby-cli
+sudo yum install moby-buildx
+```
   
-  * Download Moby packages
+3) Install openSSL: <BR>
 ```
-sudo wget http://packages.microsoft.com/centos/7/prod/moby-cli-20.10.6%2Bazure-1.x86_64.rpm
-sudo wget http://packages.microsoft.com/centos/7/prod/moby-engine-20.10.6%2Bazure-1.el7.x86_64.rpm 
-sudo wget http://packages.microsoft.com/centos/7/prod/moby-containerd-1.4.4%2Bazure-1.el7.x86_64.rpm
-sudo wget http://packages.microsoft.com/centos/7/prod/moby-runc-1.0.0~rc93%2Bazure-1.x86_64.rpm
-sudo wget http://packages.microsoft.com/centos/7/prod/moby-buildx-0.5.1%2Bazure-1.x86_64.rpm 
+sudo yum install -y compat-openssl10
 ```
-
-  *	Download libiothsm and IoT Edge 
-```
-sudo wget https://github.com/Azure/azure-iotedge/releases/download/1.1.1/libiothsm-std_1.1.1-1.el7.x86_64.rpm
-sudo wget https://github.com/Azure/azure-iotedge/releases/download/1.1.1/iotedge-1.1.1-1.el7.x86_64.rpm
-```
-
-3)	Install moby packages and IoT Edge
-
-```
-sudo yum install moby-buildx-0.5.1+azure-1.x86_64.rpm 
-sudo yum install moby-runc-1.0.0~rc93+azure-1.x86_64.rpm
-sudo yum install moby-containerd-1.4.4+azure-1.el7.x86_64.rpm 
-sudo yum install moby-engine-20.10.6+azure-1.el7.x86_64.rpm
-sudo yum install moby-cli-20.10.6+azure-1.x86_64.rpm
-sudo yum install libiothsm-std_1.1.1-1.el7.x86_64.rpm 
-sudo yum install iotedge-1.1.1-1.el7.x86_64.rpm
-```
- 
+  
 4)	Register your IoT Edge device in IoT Hub as per instructions: <BR>
 https://docs.microsoft.com/en-us/azure/iot-edge/how-to-register-device?view=iotedge-2018-06&tabs=azure-portal
 
